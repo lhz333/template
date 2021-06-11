@@ -52,18 +52,8 @@ export default new Router({
       ]
     },
     {
-      path: '/',
-      name: 'ssoIndex',
-      component: resolve => require(['@/views/sso/ssoIndex'], resolve),
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: resolve => require(['@/views/sso/ssologin'], resolve),
-    },
-    {
       path: '*',
-      redirect: '/404'
+      redirect: '/dashboard'
     }
   ]
 })

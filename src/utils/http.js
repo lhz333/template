@@ -13,8 +13,8 @@ axios.interceptors.request.use(
       // 如果配置了isLoading: false，则不显示loading
       showFullScreenLoading()
     }
-    config.headers['loginName'] = localStorage.getItem('username')
-    config.headers['Authorization'] = localStorage.getItem('token')
+    // config.headers['loginName'] = localStorage.getItem('username')
+    // config.headers['Authorization'] = localStorage.getItem('token')
     return config
   },
   error => {

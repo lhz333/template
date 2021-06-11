@@ -2,11 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import { axios } from './utils/http'
-import { momentDateFormat } from './utils/valid'
 
-import config from './views/sso/config.js'
-import token from './views/sso/token.js'
-import login from './views/sso/loginUtil.js'
 import querystring from 'querystring'
 
 import api from './utils/api'
@@ -35,25 +31,8 @@ Vue.use(VueClipboard)
 Vue.prototype.API = api
 Vue.prototype.$axios = axios
 Vue.prototype.common = common
-Vue.prototype.momentDateFormat = momentDateFormat
-Vue.prototype.$config = config
-Vue.prototype.$token = token
-Vue.prototype.$login = login
 Vue.prototype.$querystring = querystring
 axios.defaults.headers.common['Content-Type'] = 'application/json;charset=UTF-8'
-
-//使用钩子函数对路由进行权限跳转
-router.beforeEach((to, from, next) => {
-  const token = localStorage.getItem('token')
-  if (!token && to.path !== '/' && to.path !== '/login') {
-    localStorage.clear()
-    next({
-      path: '/login'
-    })
-  } else {
-    next()
-  }
-})
 
 new Vue({
   router,
