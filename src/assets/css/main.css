@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app,
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'microsoft yahei',
+    arial, STHeiTi, sans-serif;
+}
+
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+code,
+blockquote,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+th,
+td {
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:active {
+  color: #409eff;
+}
+
+li {
+  list-style: none;
+}
+
+/* 浏览器滚动条样式 */
+*::-webkit-scrollbar {
+  color: white;
+  background-color: white;
+  width: 5px;
+  height: 8px;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background: rgba(6, 6, 6, 0.5);
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5),
+    inset -2px 2px 2px rgba(204, 204, 204, 0.1),
+    inset 2px -2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* placeholder文字 */
+::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #666 !important;
+}
+
+::-moz-placeholder {
+  font-size: 12px;
+  color: #666 !important;
+}
+
+:-ms-input-placeholder {
+  font-size: 12px;
+  color: #666 !important;
+}
+
+.content-box {
+  position: absolute;
+  left: 201px;
+  right: 0;
+  top: 50px;
+  bottom: 0;
+  padding-bottom: 30px;
+  background: #ffffff;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+
+.content {
+  width: auto;
+  height: 100%;
+  padding: 6px 10px 10px 10px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.content-collapse {
+  left: 65px;
+}
+
+.container {
+  background: #fff;
+}
+
+
+.table {
+  margin-top: 6px;
+}
+
+/* 表格样式 */
+.el-table__header tr,
+.el-table__header th {
+  padding: 0;
+  height: 40px;
+  font-size: 13px;
+}
+
+.el-table__body tr,
+.el-table__body td {
+  padding: 4px 0;
+}
+
+.el-table__expanded-cell[class*='cell'] {
+  padding: 5px 20px;
+}
+
+/* button */
+.btn-wrap {
+  margin-bottom: 14px;
+}
+
+.base-btn {
+  display: inline-block;
+  margin: 1px 0 0;
+  padding: 6px 4px;
+  vertical-align: middle;
+  color: #FFF;
+  background-color: #409EFF;
+  border-color: #409EFF;
+}
+
+.el-input--small .el-input__inner {
+  height: 28px;
+  line-height: 28px;
+}
+
+/* pagination */
+.el-pagination {
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* dialog title */
+.el-dialog__title {
+  font-size: 16px;
+}
+
+.el-form-item--small.el-form-item {
+  margin-bottom: 12px;
+}
+
+/* input */
+.base-search {
+  display: inline-block;
+  width: 182px !important;
+  margin: 0 4px 4px 4px;
+}
+
+.btn-search-group .base-search {
+  margin-bottom: 4px;
+}
+
+.el-menu-item {
+  height: 30px;
+  line-height: 30px;
+}
+
+.right-solt {
+  float: right;
+}
+
+.right-solt .name {
+  margin-right: 4px;
+}
+
+.right-solt .el-input__suffix {
+  right: -42px;
+}
+
+.upload {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.el-row {
+  margin: 2px 0;
+}
+
+.el-select__tags {
+  display: flex;
+}
+
+.el-select__tags .el-tag {
+  flex: 1;
+  overflow: hidden;
+}
+
+.el-input .icon-search {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.el-input--small .el-input__icon {
+  line-height: 28px;
+}
+
+.fr {
+  float: right;
+  margin-right: 12px;
+}
+.mt6 {
+  margin-top: 6px;
+}
+
+.mr4 {
+  margin-right: 6px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.el-icon-error {
+  color: #ff623a;
+}
+
+/* tab */
+.el-tabs__header {
+  margin-bottom: 5px !important;
+}
+
+.el-tabs__item {
+  height: 30px !important;
+  line-height: 30px !important;
+}
+
+.mt-6 {
+  margin-top: -6px;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.el-button--success.is-plain:hover{
+  color: #67C23A;
+  background: #f0f9eb;
+  border-color: #c2e7b0;
+}
+.el-button--info,
+.el-button--info:hover {
+  background: #82848a;
+  border-color: #82848a;
+  color: #FFF;
+}
+.el-table__row .el-button--primary.el-button--mini,
+.el-table__row .el-button--danger.el-button--mini,
+.el-table__row .el-button--success.el-button--mini,
+.el-table__row .el-button--info.el-button--mini,
+.el-table__row .el-button--warning.el-button--mini{
+  padding: 4px 12px;
+  margin-right: 4px;
+}
+
+.el-table__row .el-button--mini i{
+  font-size: 12px !important; 
+}
+
+.el-table__row td button i {
+  font-size: 16px;
+}
+
+/* 修改element表头错位的问题 */
+body .el-table th.gutter {
+  display: table-cell !important;
+}
+
+body .el-table colgroup.gutter {
+  display: table-cell !important;
+}
+
+table {
+  width: 100% !important;
+}
+/* 全局修改颜色 */
+.el-table,
+.el-table thead,
+.datagrid-htable,
+.datagrid-btable {
+  color: #333;
+}
+.base-btn.el-button.is-disabled {
+  color: #FFF;
+  background-color: #a0cfff;
+  border-color: #a0cfff;
+}
+
+.el-table td,
+.el-table th.is-leaf {
+  border-bottom: 1px dotted #ccc;
+  border-right: 1px dotted #ccc;
+}
+
+body .el-table .el-table__footer-wrapper .has-gutter .is-leaf,
+body .el-table__fixed-footer-wrapper tbody td{
+  color: red !important;
+}
+
+.el-button--primary {
+  color: #fff;
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.el-button--danger {
+  color: #fff;
+  background-color: #ff4949;
+  border-color: #ff4949;
+}
+
+.el-dialog__body {
+  padding: 30px 5% 30px 5%;
+}
+
+.el-dialog  .el-form-item {
+  width: 100%;
+}
+
+.el-dialog  .el-form-item .el-form-item__content {
+  width: 70%;
+}
+.el-dialog  .el-form-item .el-form-item__content .el-autocomplete,
+.el-dialog  .el-form-item .el-form-item__content .el-input,
+.el-dialog  .el-form-item .el-form-item__content .el-select,
+.el-dialog  .el-form-item .el-form-item__content .el-textarea,
+.el-dialog  .el-form-item .el-form-item__content .el-input-number,
+.el-dialog  .el-form-item .el-form-item__content .el-date-editor .el-input__inner  {
+  width: 90%;
+}
+
+.el-dialog  .el-form-item .el-form-item__content .el-select .el-input,
+.el-dialog  .el-form-item .el-form-item__content .el-date-editor .el-input__inner,
+.el-dialog  .el-form-item .el-form-item__content .el-input-number .el-input,
+.el-dialog  .el-form-item .el-form-item__content .el-autocomplete .el-input{
+  width: 100%;
+}
+
+.el-input-number .el-input__inner{
+  text-align:left;
+}
+
+.cell .el-button+.el-button{
+  margin-left: 0px !important;
+}
+
+.copyBtn {
+  display: inline-block;
+  cursor: pointer;
+  color: red;
+  margin-right: 5px;
+}
+
+.lable-tag {
+  margin-right: 4px;
+}
+.lable-tag.el-tag {
+  height: 18px !important;
+  line-height: 18px !important;
+  border: none !important;
+}
+.lable-tag.el-tag--small {
+  padding: 0 3px;
+}
