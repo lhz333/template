@@ -105,14 +105,5 @@ export default {
       rnd += Math.floor(Math.random() * 10)
     }
     return rnd
-  },
-  // 获取权限中 所有的actionUrl
-  collectActionUrl (arr, actionUrlList = []) {
-    arr.forEach(({ actionUrl, subs, urls }) => {
-      if (actionUrl && !actionUrlList.includes(actionUrl)) actionUrlList.push(actionUrl.trim())
-      if (subs) this.collectActionUrl(subs, actionUrlList)
-      if (urls) this.collectActionUrl(urls, actionUrlList)
-    })
-    return actionUrlList
   }
 }

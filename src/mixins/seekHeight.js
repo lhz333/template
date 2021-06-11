@@ -22,12 +22,12 @@ export default {
     })
   },
   deactivated () {
-    let el = this.$refs.table.$el.querySelector('.el-table__body-wrapper') || this.$refs.table.$el.querySelector('.datagrid-body')
+    let el = this.$refs.table.$el.querySelector('.el-table__body-wrapper')
     this.tableSrollTop = el.scrollTop
   },
   activated () {
     this.$nextTick(() => {
-      let el = this.$refs.table.$el.querySelector('.el-table__body-wrapper') || this.$refs.table.$el.querySelector('.datagrid-body')
+      let el = this.$refs.table.$el.querySelector('.el-table__body-wrapper')
       el.scrollTop = this.tableSrollTop
     })
   },

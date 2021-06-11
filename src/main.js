@@ -4,9 +4,9 @@ import router from './router'
 import { axios } from './utils/http'
 import { momentDateFormat } from './utils/valid'
 
-import config from './components/common/sso/config.js'
-import token from './components/common/sso/token.js'
-import login from './components/common/sso/loginUtil.js'
+import config from './views/sso/config.js'
+import token from './views/sso/token.js'
+import login from './views/sso/loginUtil.js'
 import querystring from 'querystring'
 
 import api from './utils/api'

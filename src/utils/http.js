@@ -13,14 +13,6 @@ axios.interceptors.request.use(
       // 如果配置了isLoading: false，则不显示loading
       showFullScreenLoading()
     }
-    // let actionUrlList = JSON.parse(localStorage.getItem('actionUrlList'))
-    // if (actionUrlList && !actionUrlList.includes(config.url)) {
-    //   Message.error({
-    //     message: '抱歉！您没有权限操作此项功能！'
-    //   })
-    //   tryHideFullScreenLoading()
-    //   return Promise.reject()
-    // }
     config.headers['loginName'] = localStorage.getItem('username')
     config.headers["Brand"] = localStorage.getItem("brand");
     config.headers['Authorization'] = localStorage.getItem('token')

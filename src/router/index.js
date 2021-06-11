@@ -44,7 +44,7 @@ export default new Router({
           path: '/demo',
           name: 'demo',
           component: resolve =>
-            require(['../views/demo/index.vue'], resolve),
+            require(['@/views/demo/index.vue'], resolve),
           meta: {
             title: 'demo'
           }
@@ -54,17 +54,17 @@ export default new Router({
     {
       path: '/',
       name: 'ssoIndex',
-      component: resolve => require(['../components/common/sso/ssoIndex'], resolve),
+      component: resolve => require(['@/views/sso/ssoIndex'], resolve),
     },
     {
       path: '/login',
       name: 'login',
-      component: resolve => require(['../components/common/sso/ssologin'], resolve),
+      component: resolve => require(['@/views/sso/ssologin'], resolve),
     },
     {
       path: '/brand',
       name: 'brand',
-      component: resolve => require(['@/components/common/sso/brand.vue'], resolve),
+      component: resolve => require(['@/views/sso/brand.vue'], resolve),
     },
     {
       path: '*',

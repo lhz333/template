@@ -13,7 +13,6 @@ module.exports = {
   runtimeCompiler: true,
   // 默认在生成的静态资源文件名中包含hash以控制缓存
   filenameHashing: filenameHashing,
-  runtimeCompiler: true,
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json'],
@@ -28,7 +27,8 @@ module.exports = {
         'static': resolve('src/static'),
         'store': resolve('src/store')
       }
-    }
+    },
+    devtool: '#eval-source-map'
   },
   chainWebpack: (config) => {
     config.resolve.symlinks(true)
@@ -67,10 +67,6 @@ module.exports = {
     extract: true,
     // 开启 CSS source maps?
     sourceMap: !IS_PROD,
-  },
-  // 开启Debugger
-  configureWebpack: {
-    devtool: '#eval-source-map'
   },
   devServer: {
     port: 10000, //端口号
