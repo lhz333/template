@@ -4,7 +4,7 @@
     <v-sidebar></v-sidebar>
     <div class="content-box" :class="{'content-collapse':collapse}">
       <v-tags></v-tags>
-      <div class="content loading-area" :class="[isDashboardPage && isHasDashboardPage ? 'dashboard' : '']">
+      <div class="content loading-area">
         <transition name="fade-transform" mode="out-in">
           <keep-alive :include="tagsList">
             <router-view></router-view>
@@ -28,19 +28,7 @@ export default {
     }
   },
   computed: {
-    isDashboardPage () {
-      return this.$route.path === '/dashboard'
-    },
-    menuInitData () {
-      return this.$store.getters.menuInit
-    },
-    // 获取菜单权限配置里是否有首页
-    isHasDashboardPage () {
-      if (!this.menuInitData.length) return false
-      return this.menuInitData.some(item => {
-        return item.index === 'dashboard'
-      })
-    }
+
   },
   components: {
     vHead, vSidebar, vTags
@@ -63,7 +51,4 @@ export default {
 </script>
 
 <style lang="less">
-.content.dashboard {
-  padding: 0;
-}
 </style>
