@@ -7,8 +7,7 @@ const actions = {
       .get(API.menu.menuinit, {
         params: {
           username: localStorage.getItem("username"),
-          clientId: "OMS",
-          brand: localStorage.getItem("brand")
+          clientId: "OMS"
         }
       })
       .then(res => {

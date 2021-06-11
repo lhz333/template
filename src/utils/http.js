@@ -14,16 +14,7 @@ axios.interceptors.request.use(
       showFullScreenLoading()
     }
     config.headers['loginName'] = localStorage.getItem('username')
-    config.headers["Brand"] = localStorage.getItem("brand");
     config.headers['Authorization'] = localStorage.getItem('token')
-    let brand = localStorage.getItem("brand")
-    let roles = JSON.parse(localStorage.getItem('roles'))
-    if(roles) {
-      let role = roles[brand][0]
-      if(role && role != 'null') {
-        config.headers['areaCode'] = role
-      }
-    }
     return config
   },
   error => {

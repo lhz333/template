@@ -21,7 +21,6 @@
             <i class="el-icon-caret-bottom"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item divided command="changeBrand" v-if="changeBrand">切换品牌</el-dropdown-item>
             <el-dropdown-item command="resetPwd">修改密码</el-dropdown-item>
             <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
           </el-dropdown-menu>
@@ -64,7 +63,6 @@ export default {
     return {
       collapse: false,
       fullscreen: false,
-      changeBrand: false,
       name: 'CK',
       dialogFormVisible: false,
       form: {},
@@ -99,8 +97,6 @@ export default {
       } else if (command == 'resetPwd') {
         this.dialogFormVisible = true
         this.form.username = this.username
-      } else if (command == "changeBrand") {
-        this.$router.push('/brand')
       }
     },
     // 侧边栏折叠
@@ -163,8 +159,6 @@ export default {
     if (document.body.clientWidth < 1500) {
       this.collapseChage();
     }
-    let brandList = JSON.parse(localStorage.getItem('brandList'))
-    this.changeBrand = brandList.length > 1 ? true : false
   }
 }
 </script>

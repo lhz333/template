@@ -62,11 +62,6 @@ export default new Router({
       component: resolve => require(['@/views/sso/ssologin'], resolve),
     },
     {
-      path: '/brand',
-      name: 'brand',
-      component: resolve => require(['@/views/sso/brand.vue'], resolve),
-    },
-    {
       path: '*',
       redirect: '/404'
     }

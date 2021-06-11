@@ -29,14 +29,7 @@ export default {
       }).then(res => {
         let { Result } = res.data
         this.$token.saveToken(Result)
-        let brandList = Result.brandList
-        if (brandList.length <= 1) {
-          localStorage.setItem('brand', brandList.toString());
-          this.$router.push({ path: this.redirect || '/dashboard' })
-        } else {
-          localStorage.setItem('brandList', JSON.stringify(brandList))
-          this.$router.push({ path: '/brand' })
-        }
+        this.$router.push({ path: this.redirect || '/dashboard' })
       })
     },
   },
