@@ -91,7 +91,7 @@ export default {
     bus.$on('collapse', msg => {
       this.collapse = msg;
     })
-    this.$store.dispatch('initMenuList')
+    // this.$store.dispatch('initMenuList')
   },
   methods: {
 

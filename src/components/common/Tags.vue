@@ -1,5 +1,5 @@
 <template>
-  <div class="tags" :class="[isDashboardPage && isHasDashboardPage ? 'dashboard' :'']" v-if="showTags">
+  <div class="tags" v-if="showTags">
     <ul>
       <li
         class="tags-li"
@@ -90,25 +90,12 @@ export default {
     }
   },
   computed: {
-    isDashboardPage () {
-      return this.$route.path === '/dashboard'
-    },
-    menuInitData () {
-      return this.$store.getters.menuInit
-    },
-    // 获取菜单权限配置里是否有首页
-    isHasDashboardPage () {
-      if (!this.menuInitData.length) return false
-      return this.menuInitData.some(item => {
-        return item.index === 'dashboard'
-      })
-    },
     showTags () {
       return this.tagsList.length > 0;
     }
   },
   watch: {
-    $route (newValue, oldValue) {
+    $route (newValue) {
       this.setTags(newValue);
     }
   },
